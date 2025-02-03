@@ -1,12 +1,16 @@
-import re
+def verificar_data(data):
+    try:
+        dia, mes, ano = map(int, data.split('/'))
+        if 1 <= dia <= 31 and 1 <= mes <= 12 and 1900 <= ano <= 2100:
+            return True
+        else:
+            return "Data inválida"
+    except ValueError:
+        return "Data inválida"
 
-def find_dates(text):
-    # Regular expression to match dates in formats like DD/MM/YYYY, DD-MM-YYYY, YYYY/MM/DD, YYYY-MM-DD
-    date_pattern = r'\b(?:\d{1,2}[\/\-]\d{1,2}[\/\-]\d{2,4}|\d{2,4}[\/\-]\d{1,2}[\/\-]\d{1,2})\b'
-    dates = re.findall(date_pattern, text)
-    return dates
-
-# Example usage
-if __name__ == "__main__":
-    sample_text = "These are some dates: 12/05/2021, 2021-05-12, and 05-12-21."
-    print(find_dates(sample_text))
+# Exemplos de uso
+print(verificar_data("15/08/2021"))  # True
+print(verificar_data("31/02/2020"))  # Data inválida
+print(verificar_data("01/13/2020"))  # Data inválida
+print(verificar_data("32/12/2020"))  # Data inválida
+print(verificar_data("15/08/1899"))  # Data inválida
