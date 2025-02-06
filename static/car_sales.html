@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DIO - Cars</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+        h1 {
+            margin: 0;
+        }
+        .container {
+            width: 80%;
+            margin: 20px auto;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            padding: 10px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+        th {
+            background-color: #333;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <h1>DIO - Cars</h1>
+    <div class="container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Marca</th>
+                    <th>Modelo</th>
+                    <th>Ano</th>
+                    <th>Preço</th>
+                    <th>Comprar</th>
+                </tr>
+            </thead>
+            <!--Create a template table to mock for the JavaScript-->
+        <tbody>
+            <tr>
+            <td>Ford</td>
+            <td>Fiesta</td>
+            <td>2018</td>
+            <td>R$ 35.000</td>
+            <td><button car="Fiesta">Comprar</button></td>
+            </tr>
+            <tr>
+            <td>Chevrolet</td>
+            <td>Cruze</td>
+            <td>2019</td>
+            <td>R$ 50.000</td>
+            <td><button car="Cruze">Comprar</button></td>
+            </tr>
+            <tr>
+            <td>Volkswagen</td>
+            <td>Golf</td>
+            <td>2017</td>
+            <td>R$ 45.000</td>
+            <td><button car="Golf">Comprar</button></td>
+            </tr>
+        </tbody>
+        </table>
+
+        <script src="static/car_sales.js"></script>
+
+        <!--<tbody>
+            {% for car in cars %}
+                <tr>
+                    <td>{{ car.brand }}</td>
+                    <td>{{ car.model }}</td>
+                    <td>{{ car.year }}</td>
+                    <td>{{ car.price }}</td>
+                    <td><button>Comprar</button></td>
+                </tr>
+            {% endfor %}
+        </tbody>--> 
+    </div>
